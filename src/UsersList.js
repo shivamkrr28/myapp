@@ -19,6 +19,7 @@ function UsersList(){
     },[]);
     return(
         <>
+		<button> Add user</button>
         <table>
             <thead>
                 <tr>
