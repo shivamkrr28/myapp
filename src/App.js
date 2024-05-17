@@ -27,7 +27,7 @@ const App = () => {
     {/* <Home /> */}
     <h1>S02 text</h1>
     <UsersList />
-    <h1>main change</h1>
+    <h1>main text</h1>
     </UserContext.Provider>
 
   );
