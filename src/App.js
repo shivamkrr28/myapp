@@ -15,6 +15,7 @@ const App = () => {
 
   return (
     <UserContext.Provider value={{val1:text}}>
+      <h1>S01 text</h1>
     <Navbar />  
 
 <button> Change of branch S01</button>
