@@ -17,7 +17,6 @@ const App = () => {
     <UserContext.Provider value={{val1:text}}>
     <Navbar />  
 
-<button> git branch S01</button>
 <button> Change of branch S01</button>
 
     {/* <Testform /> */}
