@@ -13,14 +13,6 @@ export const UserContext = createContext();
 const App = () => {
   const [text, setText] = useState([]);
 
-// console.log("rendering...");
-// 10>
-// alpha num
-// lower Char
-// upper Char
-// no combinat aa,AA,22
-
-
   return (
     <UserContext.Provider value={{val1:text}}>
     <Navbar />  
