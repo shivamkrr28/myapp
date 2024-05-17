@@ -28,6 +28,7 @@ const App = () => {
     <button> Change2 with branch S02</button>
     {/* <Task /> */}
     {/* <Home /> */}
+    <h1>S02 text</h1>
     <UsersList />
     </UserContext.Provider>
 
