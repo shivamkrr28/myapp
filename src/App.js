@@ -13,23 +13,33 @@ export const UserContext = createContext();
 const App = () => {
   const [text, setText] = useState([]);
 
+  const [name, setName] = useState("chudail");
+
+  const [like, setLike] = useState(0);
+
+  const [pass, setPass] = useState(0);
+
+  // useEffect(()=>{
+  //  console.log("ayushi developer"); 
+  // },[like]);
+
   return (
     <UserContext.Provider value={{val1:text}}>
     <Navbar />  
 
-    {/* <Testform /> */}
-    {/* <React1 /> */}
-    <br />
 
-    <button> Change of branch S02</button>
-
-    {/* <span>---Task---</span> */}
     <br />
-    <button> Change2 with branch S02</button>
-    {/* <Task /> */}
-    {/* <Home /> */}
-    <h1>S02 text</h1>
-    <UsersList />
+    <button onClick={()=>setLike(!like)}>{like==0?"Dislike":"Liked"}</button>
+    <button onClick={()=>setName("Ayushi")}>getName</button>
+    
+      
+
+    <br/>
+    <input type={pass==0?"password":"text"} /> <button onClick={()=>setPass(!pass)}>{pass == 0?"show":"hide"}</button>
+
+    <h1>{name}</h1>
+   
+    <UsersList name={name} />
     </UserContext.Provider>
 
   );
