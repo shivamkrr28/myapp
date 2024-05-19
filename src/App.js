@@ -27,12 +27,12 @@ const App = () => {
     <UserContext.Provider value={{val1:text}}>
       <h1>S01 text</h1>
     <Navbar />  
+    {/* <Testform /> */}
+    {/* <React1 /> */}
     <br />
     <button onClick={()=>setLike(!like)}>{like==0?"Dislike":"Liked"}</button>
     <button onClick={()=>setName("Ayushi")}>getName</button>
     
-      
-
     <br/>
     <input type={pass==0?"password":"text"} /> <button onClick={()=>setPass(!pass)}>{pass == 0?"show":"hide"}</button>
 
