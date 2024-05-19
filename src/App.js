@@ -18,8 +18,6 @@ const App = () => {
       <h1>S01 text</h1>
     <Navbar />  
 
-<button> Change of branch S01</button>
-
     {/* <Testform /> */}
     {/* <React1 /> */}
     <br />
