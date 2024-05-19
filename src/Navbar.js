@@ -1,11 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Contact from './Contact.js';
-import Services from './Services.js';
 import About from './About.js';
-import Products from './Products.js';
 import Home from './Home.js';
 import Menu from "./Menu.js";
+import UsersList from './UsersList.js';
+import Task from "./Task.js";
 
 export default function Navbar(){
    
@@ -14,14 +13,13 @@ export default function Navbar(){
     }
     return(
       <BrowserRouter>
-     <Menu />
+          <Menu />
           <Routes>
-            <Route path='/task' element={<Home param={getAlert} />} />
+            <Route path='/task' element={<Task param={getAlert} />} />
             <Route path='' element="" />
             <Route path='/about' element={<About />} />
-            <Route path='/services' element={<Services />} />
-            <Route path='/products/:pid' element={<Products />} />
-            <Route path='/contact' element={<Contact />} />
+          
+            <Route path='/users' element={<UsersList />} />
           </Routes>
       </BrowserRouter>          
     );

@@ -1,45 +1,57 @@
-import React, { useState, useEffect, createContext, useContext, useCallback } from 'react';
+import React, { useState, useEffect, useRef, createContext, useContext, useCallback } from 'react';
 import "./App.css";
 import Navbar from './Navbar.js';
 import File from './File.js';
-import Testform from './Testform.js';
 import Task from './Task.js';
-import React1 from './React1.js';
 import Home from './Home.js';
-import UsersList from './UsersList.js';
+import react_img from './react_img.jpg';
 
 export const UserContext = createContext();
 
 const App = () => {
-  const [text, setText] = useState([]);
+  // const [userid, setUserid] = useState('');
+  // const [pass, setPass] = useState('');
 
-  const [name, setName] = useState("chudail");
+  let userid = useRef(null);
+  let pass = useRef(null);
 
-  const [like, setLike] = useState(0);
+  function savebtn(event){
 
-  const [pass, setPass] = useState(0);
+    event.preventDefault();
 
-  // useEffect(()=>{
-  //  console.log("ayushi developer"); 
-  // },[like]);
+    console.log("useref=>",userid.current.value);
+    console.log("pass=>",pass.current.value);
 
-  return (
-    <UserContext.Provider value={{val1:text}}>
-      <h1>S01 text</h1>
-    <Navbar />  
-    {/* <Testform /> */}
-    {/* <React1 /> */}
-    <br />
-    <button onClick={()=>setLike(!like)}>{like==0?"Dislike":"Liked"}</button>
-    <button onClick={()=>setName("Ayushi")}>getName</button>
+    let id = userid.current.value;
+    let ps = pass.current.value;
+
+    // console.log("pass=>",pass);
+
+    if(id==''){
+      alert("userid empty!");
+      return false;
+    }
+
+    if(ps==''){
+      alert("pass empty!");
+      return false;
+    }
     
-    <br/>
-    <input type={pass==0?"password":"text"} /> <button onClick={()=>setPass(!pass)}>{pass == 0?"show":"hide"}</button>
+    alert("submitted!");
 
-    <h1>{name}</h1>
-   
-    <UsersList name={name} />
-      <span>S02 Text</span>
+  }
+  return (
+    <UserContext.Provider value={{val1:"test"}}>     
+    <Navbar />  
+   <br />
+   <br />
+   <br />
+   <img src={react_img} style={{width:"100%", height:"200px"}} className="" alt="logo" />
+   {/* <form>
+    Userid :<input type="text" ref={userid}  /><br />
+    Password :<input type="password" ref={pass} /><br />
+    <button onClick={savebtn}>Submit</button>
+   </form> */}
     </UserContext.Provider>
 
   );

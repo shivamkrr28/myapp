@@ -8,11 +8,10 @@ export default function Menu(){
           <Link to="">Home</Link> |  
           <Link to="task">Task</Link> |  
           <Link to="about">About</Link> |   
-          <Link to="services">Services</Link> |
-          <Link to={"products/"+product_id}>Products</Link> |
-          <Link to="contact">Contact</Link> | 
+        
+          <Link to="users">Users</Link> | 
           <Link to="s01">S01</Link> |       
-          <Link to="s02">S02</Link> 
+          <Link to="s02">S02</Link> |
                    
         </>        
     );

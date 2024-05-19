@@ -1,11 +1,9 @@
 import { Today } from "@mui/icons-material";
 import React, { useEffect, useState } from "react";
 
-function UsersList(props){
+function UsersList(){
 
     const [users, setUsers] = useState([]);
-
-    console.log("props==>",props.name);
 
     async function getUsersList(){
         let api = await fetch('https://dummyjson.com/products');
@@ -21,6 +19,7 @@ function UsersList(props){
 
     return(
         <>
+        <br />
 		<button> Add user</button>
         <table>
             <thead>
