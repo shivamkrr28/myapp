@@ -10,7 +10,7 @@ export default function Menu(){
           <Link to="about">About</Link> |   
           <Link to="services">Services</Link>|
           <Link to={"products/"+product_id}>Products</Link>|
-          <Link to="contact">Contact</Link> 
+          <Link to="contact">Contact</Link> |
 
           <Link to="s02">S02</Link> 
                    
